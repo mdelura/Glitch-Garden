@@ -26,13 +26,10 @@ public class MusicPlayer : MonoBehaviour
             SceneManager.sceneLoaded += SceneLoaded;
             DontDestroyOnLoad(gameObject);
             _music = GetComponent<AudioSource>();
-            _music.clip = splashClip;
-            _music.loop = false;
-            _music.Play();
         }
     }
 
-    private void LoadStartScene() => SceneManager.LoadScene("Start");
+    private void LoadStartScene() => SceneManager.LoadScene("01_Start");
 
     private void SceneLoaded(Scene scene, LoadSceneMode loadSceneMode)
     {

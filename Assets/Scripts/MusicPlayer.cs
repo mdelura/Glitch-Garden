@@ -29,7 +29,8 @@ public class MusicPlayer : MonoBehaviour
         }
     }
 
-    private void LoadStartScene() => SceneManager.LoadScene("01_Start");
+    private void LoadStartScene() => SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
 
     private void SceneLoaded(Scene scene, LoadSceneMode loadSceneMode)
     {

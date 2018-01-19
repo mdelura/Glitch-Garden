@@ -189,8 +189,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 414827021}
-        m_MethodName: LoadLevel
-        m_Mode: 5
+        m_MethodName: LoadPreviousLevel
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -233,7 +233,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Start
+  m_Text: Back
 --- !u!222 &215137979
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -491,8 +491,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -565, y: -352}
-  m_SizeDelta: {x: 440, y: 160}
+  m_AnchoredPosition: {x: -492.1, y: -355.8}
+  m_SizeDelta: {x: 585.7, y: 167.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1594504878
 MonoBehaviour:
@@ -578,7 +578,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Quit
+  m_Text: Defaults
 --- !u!222 &1594504880
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -652,9 +652,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Glitch
-
-    Garden'
+  m_Text: Options
 --- !u!222 &1689636200
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -777,7 +775,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: f6315ec204890c54bb3bc6ba481917f5, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1

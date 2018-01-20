@@ -447,7 +447,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -503,7 +503,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -530,7 +530,12 @@ MonoBehaviour:
   sceneClips:
   - {fileID: 8300000, guid: 7b77d1efbfee76e48a449e2445703df7, type: 3}
   - {fileID: 8300000, guid: c205a8c58ddbb154781bcfe093dac706, type: 3}
-  splashScreenDuration: 3
+  - {fileID: 0}
+  - {fileID: 8300000, guid: 938342fac5abbff40889ac5c1a1f2e64, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!4 &1249546820
 Transform:
   m_ObjectHideFlags: 0
@@ -582,6 +587,11 @@ Prefab:
     - target: {fileID: 4828935801236950, guid: 1c91091df87d2084a9c0c4af69a7f5a2, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114676531564840142, guid: 1c91091df87d2084a9c0c4af69a7f5a2,
+        type: 2}
+      propertyPath: autoLoadNextLevelAfter
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1c91091df87d2084a9c0c4af69a7f5a2, type: 2}

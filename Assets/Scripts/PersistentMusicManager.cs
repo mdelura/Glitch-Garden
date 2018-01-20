@@ -5,8 +5,6 @@ public class PersistentMusicManager : MonoBehaviour
 {
     public AudioClip[] sceneClips;
 
-    public float splashScreenDuration = 3;
-
     private AudioSource _audioSource;
 
     private void Awake()
@@ -16,26 +14,16 @@ public class PersistentMusicManager : MonoBehaviour
         _audioSource = GetComponent<AudioSource>();
     }
 
-    private void LoadStartScene() => SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-
     private void SceneLoaded(Scene scene, LoadSceneMode loadSceneMode)
     {
-        if (scene.buildIndex  > sceneClips.Length - 1 || !sceneClips[scene.buildIndex])
+        //If sceneClips has not enough items or null items then return immediately
+        if (scene.buildIndex > sceneClips.Length - 1 || !sceneClips[scene.buildIndex])
         {
             return;
         }
-
         _audioSource.Stop();
         _audioSource.clip = sceneClips[scene.buildIndex];
-
-        if (scene.buildIndex == 0)
-        {
-            Invoke(nameof(LoadStartScene), splashScreenDuration);
-        }
-        else
-        {
-            _audioSource.loop = true;
-        }
+        _audioSource.loop = scene.buildIndex != 0;
 
         _audioSource.Play();
     }

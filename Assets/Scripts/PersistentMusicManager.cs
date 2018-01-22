@@ -12,6 +12,17 @@ public class PersistentMusicManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         SceneManager.sceneLoaded += SceneLoaded;
         _audioSource = GetComponent<AudioSource>();
+        _audioSource.volume = Preferences.MasterVolume;
+
+        Preferences.PreferenceChanged += PlayerPrefsManager_PreferenceChanged;
+    }
+
+    private void PlayerPrefsManager_PreferenceChanged(PreferenceChangedEventArgs eventArgs)
+    {
+        if (eventArgs.PreferenceName == nameof(Preferences.MasterVolume))
+        {
+            _audioSource.volume = (float)eventArgs.Value;
+        }
     }
 
     private void SceneLoaded(Scene scene, LoadSceneMode loadSceneMode)

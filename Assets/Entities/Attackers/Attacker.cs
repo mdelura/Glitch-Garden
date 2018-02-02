@@ -6,7 +6,11 @@ using UnityEngine;
 
 public class Attacker : Damageable
 {
+    public float seenEverySeconds;
+
     private float _currentSpeed;
+
+
 
     private GameObject _currentTarget;
 

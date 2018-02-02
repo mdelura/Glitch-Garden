@@ -14,10 +14,6 @@ public class DefenderSpawner : MonoBehaviour
 
     private void OnMouseDown()
     {
-        print(GetSpawnPosition());
-        var pos = GetSpawnPosition();
-
-        print($"X: {Mathf.Round(pos.x)}, Y: {Mathf.Round(pos.y)}");
         if (Button.SelectedDefender)
         {
             var newDefender = Instantiate(Button.SelectedDefender, GetSpawnPosition(), Quaternion.identity);

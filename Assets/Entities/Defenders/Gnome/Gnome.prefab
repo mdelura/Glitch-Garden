@@ -156,6 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 30
+  cost: 30
   gun: {fileID: 1700993297609832}
   projectile: {fileID: 1339613447494912, guid: 330e78115766f8e478067d34d55e84e2, type: 2}
 --- !u!212 &212369130657430136

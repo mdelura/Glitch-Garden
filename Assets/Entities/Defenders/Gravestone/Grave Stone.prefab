@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4884270731792198}
   - component: {fileID: 95787573023915142}
   - component: {fileID: 61751896914172318}
-  - component: {fileID: 114478610463635240}
   - component: {fileID: 114632564340112516}
   m_Layer: 0
   m_Name: Grave Stone
@@ -115,17 +114,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114478610463635240
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1045282446460736}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be90cec02c06ea5439dfa58c3657d23d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114632564340112516
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -137,6 +125,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 441b670f03ed0194e91456c25cb10af3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  cost: 15
 --- !u!212 &212798304575566242
 SpriteRenderer:
   m_ObjectHideFlags: 1

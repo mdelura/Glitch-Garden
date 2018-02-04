@@ -538,10 +538,11 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c205a8c58ddbb154781bcfe093dac706, type: 3}
   - {fileID: 0}
   - {fileID: 8300000, guid: 938342fac5abbff40889ac5c1a1f2e64, type: 3}
+  - {fileID: 8300000, guid: d2049fb9e73881143a0b55074c4aa395, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
+  levelCompleteClip: {fileID: 8300000, guid: 17c59e2f7e488a34ca6f1d99ef861af2, type: 3}
 --- !u!4 &1249546820
 Transform:
   m_ObjectHideFlags: 0

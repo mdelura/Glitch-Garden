@@ -36,7 +36,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4370441057391118}
   - component: {fileID: 95505908935482452}
-  - component: {fileID: 114837924868477546}
   - component: {fileID: 114664482972719732}
   - component: {fileID: 61560807672672406}
   - component: {fileID: 50531889626933406}
@@ -54,7 +53,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1279580808677518}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4370441057391118}
@@ -67,7 +66,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1437479070751406}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4, y: 1, z: 0}
+  m_LocalPosition: {x: 5, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4228895796926882}
@@ -106,7 +105,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.09266293, y: -0.07413027}
+  m_Offset: {x: -0.07447386, y: -0.07413027}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -117,7 +116,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6967938, y: 0.72048944}
+  m_Size: {x: 0.66041565, y: 0.72048944}
   m_EdgeRadius: 0
 --- !u!95 &95505908935482452
 Animator:
@@ -147,18 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce87a36f0fffaaa4a84bc5634943a521, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114837924868477546
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1437479070751406}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a2804c26ddffd847a921c65bcf42eed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100
+  health: 20
   seenEverySeconds: 5
 --- !u!212 &212373958591627870
 SpriteRenderer:
@@ -193,7 +181,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300038, guid: c9d6ecf0adfed4fd990551604220e4a6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

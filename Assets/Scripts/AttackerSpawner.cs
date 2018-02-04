@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -13,13 +12,14 @@ public class AttackerSpawner : MonoBehaviour
     float _spawnXPos = 12;
 
     private Dictionary<GameObject, float> _lastSpawnTimes;
-
+    private GameTimer _gameTimer;
 
     // Use this for initialization
     void Start()
     {
         _lastSpawnTimes = attackerPrefabs
             .ToDictionary(a => a, a => Random.Range(-1f, 0));
+        _gameTimer = FindObjectOfType<GameTimer>();
     }
 
     // Update is called once per frame
@@ -27,16 +27,19 @@ public class AttackerSpawner : MonoBehaviour
     {
         foreach (var attacker in attackerPrefabs)
         {
-            if (IsTimeToSpawn(attacker))
+            if (IsTimeToSpawn(attacker) && 
+                !IsLevelFinished())
             {
                 Spawn(attacker);
             }
         }
     }
 
+    private bool IsLevelFinished() => _gameTimer.TimeLeft <= 0;
+
     void Spawn(GameObject attacker)
     {
-        _lastSpawnTimes[attacker] = Time.realtimeSinceStartup;
+        _lastSpawnTimes[attacker] = Time.timeSinceLevelLoad;
 
         var newAttacker = Instantiate(attacker, new Vector3(_spawnXPos, Random.Range(1, 6)), Quaternion.identity);
         newAttacker.transform.parent = transform;
@@ -45,6 +48,6 @@ public class AttackerSpawner : MonoBehaviour
     bool IsTimeToSpawn(GameObject attacker)
     {
         var spawnRate = attacker.GetComponent<Attacker>().seenEverySeconds;
-        return Time.realtimeSinceStartup - _lastSpawnTimes[attacker] >= spawnRate;
+        return Time.timeSinceLevelLoad - _lastSpawnTimes[attacker] >= spawnRate;
     }
 }

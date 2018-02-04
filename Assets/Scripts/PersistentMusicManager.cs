@@ -5,6 +5,8 @@ public class PersistentMusicManager : MonoBehaviour
 {
     public AudioClip[] sceneClips;
 
+    public AudioClip levelCompleteClip;
+
     private AudioSource _audioSource;
 
     private void Awake()
@@ -25,17 +27,22 @@ public class PersistentMusicManager : MonoBehaviour
         }
     }
 
+    public void PlayLevelCompleteClip() => PlayClip(levelCompleteClip, false);
+
     private void SceneLoaded(Scene scene, LoadSceneMode loadSceneMode)
     {
         //If sceneClips has not enough items or null items then return immediately
-        if (scene.buildIndex > sceneClips.Length - 1 || !sceneClips[scene.buildIndex])
+        if (scene.buildIndex < sceneClips.Length && sceneClips[scene.buildIndex])
         {
-            return;
+            PlayClip(sceneClips[scene.buildIndex], scene.buildIndex != 0);
         }
-        _audioSource.Stop();
-        _audioSource.clip = sceneClips[scene.buildIndex];
-        _audioSource.loop = scene.buildIndex != 0;
+    }
 
+    private void PlayClip(AudioClip audioClip, bool loop)
+    {
+        _audioSource.Stop();
+        _audioSource.clip = audioClip;
+        _audioSource.loop = loop;
         _audioSource.Play();
     }
 }

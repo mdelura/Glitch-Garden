@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Button : MonoBehaviour
 {
@@ -9,11 +10,14 @@ public class Button : MonoBehaviour
 
     public GameObject associatedDefender;
 
+    private Text _costText;
+
     public static GameObject SelectedDefender { get; private set; }
 
     private void Start()
     {
         _buttons = GameObject.Find("Buttons");
+        GetComponentInChildren<Text>().text = associatedDefender.GetComponent<Defender>().cost.ToString();
     }
 
     private void OnMouseDown()

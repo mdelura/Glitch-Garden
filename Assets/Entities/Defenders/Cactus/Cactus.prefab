@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac55afc4723bd794aa16b420618bcdeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 25
+  health: 50
   cost: 20
   gun: {fileID: 1835694217026548}
   projectile: {fileID: 1978348286727290, guid: 5d1a5eba753f3ec4291bc99fd20ccfb8, type: 2}

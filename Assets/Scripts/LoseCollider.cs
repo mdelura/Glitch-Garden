@@ -7,6 +7,6 @@ public class LoseCollider : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        SceneManager.LoadScene("Lose");
+        SceneManager.LoadScene("03_Lose");
     }
 }

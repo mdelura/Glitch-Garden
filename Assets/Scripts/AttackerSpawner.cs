@@ -9,6 +9,9 @@ public class AttackerSpawner : MonoBehaviour
     [Tooltip("Maximum number of simultaneous attackers.")]
     public int maxAttackers = 3;
 
+    [Range(0, 1f)]
+    public float increaseSpawnRateAfter = 0.75f;
+
     float _spawnXPos = 12;
 
     private Dictionary<GameObject, float> _lastSpawnTimes;
@@ -45,9 +48,24 @@ public class AttackerSpawner : MonoBehaviour
         newAttacker.transform.parent = transform;
     }
 
+
     bool IsTimeToSpawn(GameObject attacker)
     {
-        var spawnRate = attacker.GetComponent<Attacker>().seenEverySeconds;
+        var spawnRate = attacker.GetComponent<Attacker>().seenEverySeconds / (SpawnRateIncreased() ? 2 : 1);
         return Time.timeSinceLevelLoad - _lastSpawnTimes[attacker] >= spawnRate;
+    }
+
+    bool SpawnRateIncreased()
+    {
+
+        bool result = (_gameTimer.levelLenghtInSecs - _gameTimer.TimeLeft) / (float)_gameTimer.levelLenghtInSecs >= increaseSpawnRateAfter;
+        if (result)
+        {
+            print("increased");
+
+        }
+
+        return result;
+
     }
 }

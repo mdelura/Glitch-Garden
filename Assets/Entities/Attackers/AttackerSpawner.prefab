@@ -55,3 +55,4 @@ MonoBehaviour:
   - {fileID: 1925798920579158, guid: 091812b2a7561d54ea7153c6a5d5b248, type: 2}
   - {fileID: 1437479070751406, guid: 25c2d436bc7eb284da44188396dd5cb3, type: 2}
   maxAttackers: 3
+  increaseSpawnRateAfter: 0.75

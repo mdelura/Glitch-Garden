@@ -55,17 +55,5 @@ public class AttackerSpawner : MonoBehaviour
         return Time.timeSinceLevelLoad - _lastSpawnTimes[attacker] >= spawnRate;
     }
 
-    bool SpawnRateIncreased()
-    {
-
-        bool result = (_gameTimer.levelLenghtInSecs - _gameTimer.TimeLeft) / (float)_gameTimer.levelLenghtInSecs >= increaseSpawnRateAfter;
-        if (result)
-        {
-            print("increased");
-
-        }
-
-        return result;
-
-    }
+    bool SpawnRateIncreased() => Time.timeSinceLevelLoad / _gameTimer.levelLenghtInSecs >= increaseSpawnRateAfter;
 }

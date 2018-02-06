@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameTimer : MonoBehaviour
@@ -41,7 +42,7 @@ public class GameTimer : MonoBehaviour
         }
     }
 
-    private void LoadNextLevel() => FindObjectOfType<LevelManager>().LoadNextLevel();
+    private void LoadNextLevel() => SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
     public int TimeLeft
     {

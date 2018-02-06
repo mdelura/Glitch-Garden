@@ -38,8 +38,6 @@ public class Attacker : Damageable
 
     private void Start()
     {
-        print("attacker started");
-
         animator = GetComponent<Animator>();
     }
 
